@@ -10,10 +10,6 @@ import Foundation
 class Wage {
     
     class func getHours(forWage wage: Double, andPrice price: Double) -> Int {
-        let wage = Int(wage)
-        return Int(ceil(price / Double(wage)))
-        
-        
-        
+        return Int(ceil(price / wage))
     }
 }
