@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D758AD6325B136BC0029A698 /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D758AD6225B136BC0029A698 /* CurrencyTextField.swift */; };
 		D766C3C625A82621009559D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766C3C525A82621009559D5 /* AppDelegate.swift */; };
 		D766C3C825A82621009559D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766C3C725A82621009559D5 /* SceneDelegate.swift */; };
-		D766C3CA25A82621009559D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766C3C925A82621009559D5 /* ViewController.swift */; };
+		D766C3CA25A82621009559D5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D766C3C925A82621009559D5 /* MainVC.swift */; };
 		D766C3CD25A82621009559D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D766C3CB25A82621009559D5 /* Main.storyboard */; };
 		D766C3CF25A82623009559D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D766C3CE25A82623009559D5 /* Assets.xcassets */; };
 		D766C3D225A82623009559D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D766C3D025A82623009559D5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D758AD6225B136BC0029A698 /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 		D766C3C225A82621009559D5 /* window-shopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "window-shopper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D766C3C525A82621009559D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D766C3C725A82621009559D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D766C3C925A82621009559D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D766C3C925A82621009559D5 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		D766C3CC25A82621009559D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D766C3CE25A82623009559D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D766C3D125A82623009559D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +58,32 @@
 		D766C3C425A82621009559D5 /* window-shopper */ = {
 			isa = PBXGroup;
 			children = (
+				D766C3DC25A82A98009559D5 /* Views */,
+				D766C3DA25A8295B009559D5 /* Controller */,
 				D766C3C525A82621009559D5 /* AppDelegate.swift */,
 				D766C3C725A82621009559D5 /* SceneDelegate.swift */,
-				D766C3C925A82621009559D5 /* ViewController.swift */,
 				D766C3CB25A82621009559D5 /* Main.storyboard */,
 				D766C3CE25A82623009559D5 /* Assets.xcassets */,
 				D766C3D025A82623009559D5 /* LaunchScreen.storyboard */,
 				D766C3D325A82623009559D5 /* Info.plist */,
 			);
 			path = "window-shopper";
+			sourceTree = "<group>";
+		};
+		D766C3DA25A8295B009559D5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D766C3C925A82621009559D5 /* MainVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D766C3DC25A82A98009559D5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D758AD6225B136BC0029A698 /* CurrencyTextField.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D766C3CA25A82621009559D5 /* ViewController.swift in Sources */,
+				D766C3CA25A82621009559D5 /* MainVC.swift in Sources */,
 				D766C3C625A82621009559D5 /* AppDelegate.swift in Sources */,
+				D758AD6325B136BC0029A698 /* CurrencyTextField.swift in Sources */,
 				D766C3C825A82621009559D5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

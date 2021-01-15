@@ -1,24 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="window_shopper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowShopperBG" translatesAutoresizingMaskIntoConstraints="NO" id="6c2-Sd-IIZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" keyboardKey="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowShopperIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hrc-cY-7sb">
+                                <rect key="frame" x="157.5" y="60" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Rsq-ol-OU2"/>
+                                    <constraint firstAttribute="width" constant="60" id="YTP-w7-Akm"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your hourly wage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wn2-bI-P4X" customClass="CurrencyTextField" customModule="window_shopper" customModuleProvider="target">
+                                <rect key="frame" x="68" y="165" width="239" height="34"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kJF-5i-FF1" customClass="CurrencyTextField" customModule="window_shopper" customModuleProvider="target">
+                                <rect key="frame" x="68" y="229" width="239" height="34"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kJF-5i-FF1" firstAttribute="top" secondItem="wn2-bI-P4X" secondAttribute="bottom" constant="30" id="5a9-xY-chY"/>
+                            <constraint firstItem="6c2-Sd-IIZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7pa-xD-Oro"/>
+                            <constraint firstItem="hrc-cY-7sb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="8Dm-h5-ms3"/>
+                            <constraint firstItem="6c2-Sd-IIZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Flq-5I-0Ev"/>
+                            <constraint firstItem="6c2-Sd-IIZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Glq-FG-ncp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kJF-5i-FF1" secondAttribute="trailing" constant="68" id="UFh-8u-ASZ"/>
+                            <constraint firstItem="6c2-Sd-IIZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Vgn-kJ-L47"/>
+                            <constraint firstItem="wn2-bI-P4X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="bDo-ng-KT3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wn2-bI-P4X" secondAttribute="trailing" constant="68" id="eBB-k1-JJB"/>
+                            <constraint firstItem="kJF-5i-FF1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="gRr-9R-tL4"/>
+                            <constraint firstItem="wn2-bI-P4X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kml-CW-qEC"/>
+                            <constraint firstItem="hrc-cY-7sb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="onj-1U-rAa"/>
+                            <constraint firstItem="wn2-bI-P4X" firstAttribute="top" secondItem="hrc-cY-7sb" secondAttribute="bottom" constant="45" id="rFm-SB-725"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="priceText" destination="kJF-5i-FF1" id="sMK-Yt-NYF"/>
+                        <outlet property="wageText" destination="wn2-bI-P4X" id="gM9-Fa-eAs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="20" y="92.203898050974516"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="kJF-5i-FF1">
+            <size key="intrinsicContentSize" width="92.5" height="34"/>
+        </designable>
+        <designable name="wn2-bI-P4X">
+            <size key="intrinsicContentSize" width="138" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="windowShopperBG" width="414" height="736"/>
+        <image name="windowShopperIcon" width="115" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
