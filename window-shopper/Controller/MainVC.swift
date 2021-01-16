@@ -51,8 +51,6 @@ class MainVC: UIViewController {
         wageText.text = ""
         priceText.text = ""
     }
-    
-    
-    
+
 }
 
